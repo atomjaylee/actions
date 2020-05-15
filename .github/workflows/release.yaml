@@ -1,0 +1,23 @@
+name: Github Actions Demo
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: publish build code
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@master
+
+      - name: setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "13"
+
+      - name: build project
+        run: npm run build
+
+      - name: deploy
