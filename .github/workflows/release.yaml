@@ -1,4 +1,5 @@
 name: Github Actions Demo
+
 on:
   push:
     branches:
@@ -19,5 +20,3 @@ jobs:
 
       - name: build project
         run: npm run build
-
-      - name: deploy
