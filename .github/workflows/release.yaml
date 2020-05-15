@@ -31,6 +31,9 @@ jobs:
           host: "120.27.0.225"
           pass: "Jiejing0427"
 
+      - name: deploy
+        run: rsync ./dist/ user@remote:home/actions/
+
       # - name: deploy
       #   uses: easingthemes/ssh-deploy@v2.0.7
       #   env:
