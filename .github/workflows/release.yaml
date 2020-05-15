@@ -31,6 +31,6 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SECRET_TOKEN }}
           ARGS: "-avz --delete"
           SOURCE: "dist/"
-          REMOTE_HOST: ${{ secrets.SECRET_IP }}
-          REMOTE_USER: ${{ secrets.SECRET_ROLE }}
+          REMOTE_HOST: "120.27.0.225"
+          REMOTE_USER: "root"
           TARGET: "/home/actions/"
