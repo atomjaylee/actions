@@ -24,11 +24,11 @@ jobs:
           npm run build
           
       - name: Deploy
-        uses: easingthemes/ssh-deploy@v2.1.1
+        uses: easingthemes/ssh-deploy@v2.1.2
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SECRET_TOKEN }}
           ARGS: "-avz --delete"
           SOURCE: "dist/"
           REMOTE_HOST: "120.27.0.225"
           REMOTE_USER: "root"
-          TARGET: "/home/actions"
+          TARGET: "/home/nginx-1.16.1/html"
